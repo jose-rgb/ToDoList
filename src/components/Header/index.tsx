@@ -1,5 +1,5 @@
 import { Image, View, Text } from "react-native";
-import { styles } from "./style";
+import { styles } from "./styles";
 import  logoImage  from "../../assets/logo.png"
 
 export function Header() {
