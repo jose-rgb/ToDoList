@@ -6,9 +6,9 @@ export const styles = StyleSheet.create({
 		width: '75%',
 		backgroundColor: '#262626',
 		borderRadius: 5,
-		color: '#F2F2F2',
 		padding: 16,
-
+		fontSize: 14,
+		fontFamily: 'Inter_400Regular',
 		
 		marginRight: 4,
 		borderColor: '#0D0D0D',
@@ -22,9 +22,9 @@ export const styles = StyleSheet.create({
 		width: '75%',
 		backgroundColor: '#262626',
 		borderRadius: 5,
-		color: '#F2F2F2',
 		padding: 16,
-
+		fontSize: 14,
+		color: '#F2F2F2',
 		
 		marginRight: 4,
 		borderColor: '#5E60CE',
