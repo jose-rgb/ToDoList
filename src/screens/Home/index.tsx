@@ -3,6 +3,7 @@ import { styles } from "./styles";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import TasksInfo from "../../components/TasksInfo";
+import EmptyTasks from "../../components/EmptyTasks";
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
             <Header />
             <Input />
             <TasksInfo />
+            <EmptyTasks />
         </View>
     )
 }
