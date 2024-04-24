@@ -3,7 +3,14 @@ import { styles } from "./styles";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useState } from "react";
 
-export function Input() {
+type InputProps = {
+    task: string
+    inputRef: React.RefObject<TextInput>
+    onChangeText: (task: string) => void
+    onPress: () => void
+}
+
+export function Input({task, inputRef, onChangeText, onPress}: InputProps) {
     const [focus, setFocus] = useState(false);
     const customStyle = focus ? styles.inputFocus : styles.input;
 
@@ -14,8 +21,14 @@ export function Input() {
              style={customStyle} placeholder="Adicione uma nova tarefa"
              placeholderTextColor={"#808080"}
              onFocus={() => setFocus(true)}
+             value={task}
+             onChangeText={onChangeText}
+             ref={inputRef}
+             autoCorrect={false}
+             onSubmitEditing={onPress}
+             returnKeyType="done"
             />
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={onPress}>
 					<MaterialCommunityIcons
 						name="plus-circle-outline"
 						size={22}
