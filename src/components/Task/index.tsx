@@ -16,39 +16,41 @@ export function Task({
     onTaskDeleted,
 }:TasksProps){
     return (
-        <View style={styles.taskContainer}>
+        <View style={styles.container}>
+            <View style={styles.taskContainer}>
 
-            <TouchableOpacity onPress={() => onTaskDone(id)}>
-                <MaterialCommunityIcons
-                    name={
-                        isCompleted
-                                ? 'checkbox-marked-circle-outline'
-                                : 'checkbox-blank-circle-outline'
-                    }
-                    size={22}
-                    color={
-                        isCompleted
-                                ? '#8284FA'
-                                : '#4EA8DE'
-                    }   
-                />
-            </TouchableOpacity>
-
-            <View style={styles.textContainer}>
-				<Text
-					style={isCompleted ? styles.textDone : styles.textCreated}
-				>
-					Integer urna interdum massa libero auctor neque turpis turpis semper.
-				</Text>
-			</View>
-
-            <TouchableOpacity onPress={() => onTaskDeleted(id)}>
-                    <MaterialCommunityIcons 
-                        name="trash-can-outline"
-                        size={20}
-                        color='#808080'
+                <TouchableOpacity onPress={() => onTaskDone(id)}>
+                    <MaterialCommunityIcons
+                        name={
+                            isCompleted
+                                    ? 'checkbox-marked-circle-outline'
+                                    : 'checkbox-blank-circle-outline'
+                        }
+                        size={22}
+                        color={
+                            isCompleted
+                                    ? '#8284FA'
+                                    : '#4EA8DE'
+                     }   
                     />
-            </TouchableOpacity>
+                </TouchableOpacity>
+
+                <View style={styles.textContainer}>
+				    <Text
+					    style={isCompleted ? styles.textDone : styles.textCreated}
+				    >
+					    {title}
+				    </Text>
+			    </View>
+
+                <TouchableOpacity onPress={() => onTaskDeleted(id)}>
+                        <MaterialCommunityIcons 
+                            name="trash-can-outline"
+                            size={20}
+                            color='#808080'
+                        />
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }

@@ -4,14 +4,16 @@ import clipboard from '../../assets/clipboard.png'
 
 export default function EmptyTasks() {
     return(
-        <View style = {styles.container}>
-            <Image style={styles.image} source={clipboard}/>
-            <Text style={styles.textBold}>
-				Você ainda não tem tarefas cadastradas
-			</Text>
-			<Text style={styles.textRegular}>
-				Crie tarefas e organize seus itens a fazer
-			</Text>
+        <View style={styles.container}>
+            <View style = {styles.content}>
+                <Image style={styles.image} source={clipboard}/>
+                <Text style={styles.textBold}>
+				    Você ainda não tem tarefas cadastradas
+			    </Text>
+			    <Text style={styles.textRegular}>
+				    Crie tarefas e organize seus itens a fazer
+			    </Text>
+            </View>
         </View>
     )
 }

@@ -3,6 +3,10 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         top: 60,
+        width: '100%',
+        alignItems: 'center'
+    },
+    content: {
         width: '87%',
         borderWidth: 2,
         borderTopColor: '#333333',

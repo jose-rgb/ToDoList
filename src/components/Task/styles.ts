@@ -1,8 +1,14 @@
 import { StyleSheet } from "react-native";
 
 export const styles =StyleSheet.create({
-    taskContainer: {
+	container: {
 		width: '100%',
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+    taskContainer: {
+		top: 60,
+		width: '90%',
 		height: 64,
 		backgroundColor: '#262626',
 		flexDirection: 'row',
