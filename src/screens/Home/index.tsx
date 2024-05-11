@@ -52,6 +52,11 @@ export default function Home() {
         ])
     }
 
+    const totalTasksCreated = tasks.length
+    const totalTasksCompleted = tasks.filter(
+        ({ isCompleted  }) => isCompleted,
+    ).length
+
 
     return (
         <View style={styles.container}>
@@ -62,7 +67,7 @@ export default function Home() {
                 onChangeText={setNewtask}
                 onPress={handleTaskAdd}
              />
-            <TasksInfo />
+            <TasksInfo totalTasksCreated={totalTasksCreated} totalTasksCompleted={totalTasksCompleted} />
             <View  style={styles.tasksContainer}>
                 <FlatList
                     showsVerticalScrollIndicator={false}
@@ -79,8 +84,7 @@ export default function Home() {
                     )}
                     ListEmptyComponent={<EmptyTasks />}
                 />      
-            </View>
-            
+            </View>     
         </View>
     )
 }
